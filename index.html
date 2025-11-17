@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeWithMuaaz - Online Code Compiler</title>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="https://codewithmuaaz.online/Favicon.ico" type="image/x-icon">
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ 
+  <nav class="navbar">
+    <a href="https://codewithmuaaz.online" class="navbar-brand">
+      <div class="brand-icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Code With Muaaz</span>
+        <span class="brand-subtitle">ONLINE CODE COMPILER</span>
+      </div>
+    </a>
+
+    <div class="navbar-actions">
+      <div class="toggle-container">
+        <span class="toggle-label">Auto Run</span>
+        <div class="toggle-switch active" id="autoRunToggle">
+          <div class="toggle-slider"></div>
+        </div>
+      </div>
+
+      <button class="btn btn-secondary" onclick="clearAll()">
+        <i class="fas fa-trash-alt"></i>
+        <span class="btn-text">Clear</span>
+      </button>
+
+      <button class="btn btn-secondary" onclick="downloadCode()">
+        <i class="fas fa-download"></i>
+        <span class="btn-text">Download</span>
+      </button>
+
+      <button class="btn btn-success" onclick="runCode()">
+        <i class="fas fa-play"></i>
+        <span class="btn-text">Run Code</span>
+      </button>
+    </div>
+  </nav>
+
+ 
+  <div class="container">
+   
+    <div class="editor-section">
+      <div class="editor-header">
+        <div class="editor-title">
+          <i class="fas fa-code"></i>
+          <span>Code Editor</span>
+        </div>
+      </div>
+
+      <div class="editor-tabs">
+        <div class="tab active" data-editor="html">
+          <i class="fab fa-html5" style="color: #e34c26;"></i>
+          <span class="tab-text">HTML</span>
+        </div>
+        <div class="tab" data-editor="css">
+          <i class="fab fa-css3-alt" style="color: #264de4;"></i>
+          <span class="tab-text">CSS</span>
+        </div>
+        <div class="tab" data-editor="js">
+          <i class="fab fa-js-square" style="color: #f0db4f;"></i>
+          <span class="tab-text">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="editors">
+        <div class="editor-panel active" data-panel="html">
+          <textarea id="htmlCode" placeholder="<!-- Write your HTML code here -->
+<div class='container'>
+  <h1>Hello, World!</h1>
+  <p>Start building something amazing!</p>
+</div>" spellcheck="false"></textarea>
+        </div>
+
+        <div class="editor-panel" data-panel="css">
+          <textarea id="cssCode" placeholder="/* Write your CSS code here */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}" spellcheck="false"></textarea>
+        </div>
+
+        <div class="editor-panel" data-panel="js">
+          <textarea id="jsCode" placeholder="// Write your JavaScript code here
+console.log('Hello from Code With Muaaz!');
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('Ready to code!');
+});" spellcheck="false"></textarea>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="output-section" id="outputSection">
+      <div class="output-header">
+        <div class="output-title">
+          <i class="fas fa-desktop"></i>
+          <span>Live Preview</span>
+          <div class="status-indicator"></div>
+        </div>
+        <div class="output-controls">
+          <button class="icon-btn" onclick="refreshOutput()" title="Refresh Output">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+          <button class="icon-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <iframe id="output" class="output-frame" sandbox="allow-scripts allow-modals allow-forms allow-pointer-lock allow-popups allow-same-origin"></iframe>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
