@@ -1,2 +1,15 @@
-# COMPILER
-A lightweight HTML, CSS, and JavaScript online compiler built for instant code testing and learning. Features a simple editor, live preview, and clean UI — perfect for beginners and developers to quickly experiment with frontend code in the browser.
+# HTML • CSS • JavaScript Online Compiler
+
+A lightweight, fast, and clean frontend compiler for writing, testing, and previewing HTML, CSS, and JavaScript code directly in the browser.  
+Built with simplicity and speed in mind — perfect for beginners, students, and developers who want a quick coding playground.
+
+---
+
+## 🚀 Features
+- ✨ **Live Preview** (Instant output using iframe)  
+- 🎨 **Separate Editors** for HTML, CSS, and JavaScript  
+- ⚡ **Fast Execution** — runs entirely in the browser  
+- 🖥️ **Responsive Dark UI**  
+- 📱 Works on **mobile and desktop**  
+- 🔒 No backend required — fully client-side  
+- 🧪 Great for quick experiments, demos, and learning  
